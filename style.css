@@ -32,12 +32,12 @@ body {
     display: flex;
     justify-content: space-between; /* 로고와 메뉴 양쪽 정렬 */
     align-items: center;
-    padding: 10px 20px; /* 좌우 여백 확대 */
+    padding: 10px 30px; /* 좌우 여백 확대 */
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
-    width: 100%;
+    width: calc(100% - 20px); /* 전체 너비 설정 (좌우 공백 확보) */
     z-index: 1000;
 }
 
@@ -45,10 +45,11 @@ body {
 .navbar nav .nav-list {
     display: flex;
     justify-content: flex-end; /* 메뉴를 오른쪽 정렬 */
-    gap: 100px; /* 기존 메뉴 간격 유지 */
+    gap: 60px; /* 기존 메뉴 간격 유지 */
     list-style: none;
     margin: 0;
     padding: 0;
+    overflow: hidden; /* 메뉴가 삐져나가는 현상 방지 */
 }
 
 .navbar nav .nav-list li a {
@@ -65,6 +66,15 @@ body {
     color: #005bb5; /* 호버 효과 */
 }
 
+@media (max-width: 1024px) {
+    .navbar nav .nav-list {
+        gap: 40px; /* 화면 크기가 작아질 때 간격 축소 */
+    }
+
+    .navbar {
+        padding: 10px 20px; /* 작은 화면에서는 좌우 여백 축소 */
+    }
+}
 /* Hero 섹션 */
 .hero {
     display: flex;
