@@ -13,7 +13,7 @@ body {
     align-items: center;
     text-align: center;
     height: 100vh;
-    background-image: url('https://via.placeholder.com/1920x1080'); /* Replace with your image URL */
+    background-image: url('./images/background.jpg');
     background-size: cover;
     background-position: center;
     color: white;
