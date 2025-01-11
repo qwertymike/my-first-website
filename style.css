@@ -44,7 +44,7 @@ body {
 /* 메뉴 간격 유지 */
 .navbar nav .nav-list {
     display: flex;
-    gap:100px; /* 기존 메뉴 간격 유지 */
+    gap: 80px; /* 기존 메뉴 간격 유지 */
     list-style: none;
     margin: 0;
     padding: 0;
