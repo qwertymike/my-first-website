@@ -20,7 +20,7 @@ body {
 .navbar nav .nav-list {
     display: flex;
     justify-content: center;
-    gap: 30px; /* 간격 조정 */
+    gap: 50px; /* 간격 조정 */
     list-style: none;
     margin: 0;
     padding: 0;
