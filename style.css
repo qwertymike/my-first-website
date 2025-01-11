@@ -33,12 +33,18 @@ body {
     justify-content: space-between; /* 로고와 메뉴 양쪽 정렬 */
     align-items: center;
     padding: 10px 40px; /* 좌우 여백 확대 */
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 /* 메뉴 간격 유지 */
 .navbar nav .nav-list {
     display: flex;
-    gap: 80px; /* 기존 메뉴 간격 유지 */
+    gap:100px; /* 기존 메뉴 간격 유지 */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -55,10 +61,8 @@ body {
 }
 
 .navbar nav .nav-list li a:hover {
-    background-color: #f4f4f4; /* 약간 어두운 배경으로 변경 */
-    color: #000; /* 호버 시 더 진한 검정 글씨 */
+    color: #005bb5; /* 호버 효과 */
 }
-
 
 /* Hero 섹션 */
 .hero {
