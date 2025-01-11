@@ -49,7 +49,10 @@ body {
     align-items: center;
     text-align: center;
     height: 100vh;
-    background: linear-gradient(to bottom, #005bb5, #1a73e8); /* 세련된 그라데이션 배경 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* 그라데이션 덮기 */
+                url('./images/background.jpg'); /* 배경 이미지 추가 */
+    background-size: cover; /* 이미지가 섹션을 채우도록 설정 */
+    background-position: center; /* 이미지의 중앙을 기준으로 정렬 */
     color: white;
     padding: 0 20px;
 }
