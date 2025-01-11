@@ -1,4 +1,4 @@
-/* 전체 기본 스타일 */
+/* 전체 스타일 */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -8,19 +8,19 @@ body {
 
 /* 네비게이션 바 */
 .navbar {
-    position: fixed; /* 추가: 화면 상단에 고정 */
+    position: fixed;
     top: 0;
     width: 100%;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 추가: 가벼운 그림자 효과 */
-    z-index: 1000; /* 수정: 다른 요소 위에 고정 */
+    background: linear-gradient(to right, #1a73e8, #005bb5); /* 그라데이션 배경 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
     padding: 10px 20px;
 }
 
 .navbar nav .nav-list {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px; /* 간격 조정 */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -28,17 +28,20 @@ body {
 
 .navbar nav .nav-list li a {
     text-decoration: none;
-    color: #333; /* 기존: 기본 텍스트 색상 */
-    font-weight: bold;
+    color: white;
+    font-weight: 600;
     font-size: 1rem;
-    transition: color 0.3s ease; /* 추가: 부드러운 색상 전환 */
+    padding: 10px 15px; /* 메뉴 폭 조정 */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar nav .nav-list li a:hover {
-    color: #0071e3; /* 새로운: Apple 스타일의 파란색 포인트 */
+    background-color: #ffffff;
+    color: #1a73e8;
 }
 
-/* Hero Section */
+/* Hero 섹션 */
 .hero {
     display: flex;
     flex-direction: column;
@@ -46,22 +49,19 @@ body {
     align-items: center;
     text-align: center;
     height: 100vh;
-    background-image: url('./images/background.jpg'); /* 새로운: 배경 이미지 추가 */
-    background-size: cover;
-    background-position: center;
-    color: #1d1d1f; /* 수정: 텍스트 색상 추가 */
+    background: linear-gradient(to bottom, #005bb5, #1a73e8); /* 세련된 그라데이션 배경 */
+    color: white;
     padding: 0 20px;
 }
 
 .hero h1 {
-    font-size: 3.5rem; /* 수정: 더 큰 텍스트 크기 */
-    font-weight: 700; /* 추가: 텍스트 굵게 표시 */
+    font-size: 3.5rem;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 1.2rem;
-    color: #6e6e73; /* 새로운: Apple 스타일의 텍스트 색상 */
     max-width: 600px;
     line-height: 1.5;
     margin-bottom: 30px;
@@ -70,38 +70,59 @@ body {
 .cta-button {
     padding: 15px 30px;
     font-size: 1rem;
-    font-weight: bold; /* 추가: 텍스트 굵게 표시 */
-    color: white;
-    background-color: #0071e3; /* Apple 스타일의 파란색 */
+    font-weight: bold;
+    color: #1a73e8;
+    background-color: white;
     border: none;
     border-radius: 8px;
     text-decoration: none;
-    transition: background-color 0.3s ease; /* 추가: 배경색 전환 효과 */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #005bb5; /* 새로운: Hover 효과 */
+    background-color: #ffffff;
+    color: #005bb5;
+    border: 1px solid #005bb5;
+}
+
+/* 소개 섹션 */
+#about {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* 새로운 배경색 */
+}
+
+#about h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #555;
 }
 
 /* 서비스 섹션 */
 #services {
     padding: 60px 20px;
     text-align: center;
-    background-color: #f9f9f9; /* 새로운: 서비스 섹션 배경 색상 */
+    background-color: #ffffff; /* 새로운 배경색 */
 }
 
 #services h2 {
     font-size: 2rem;
     margin-bottom: 40px;
-    color: #1d1d1f; /* 새로운: 헤더 텍스트 색상 */
+    color: #1d1d1f;
 }
 
 .service-card {
     margin: 0 auto 20px auto;
     max-width: 300px;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 새로운: 카드 섀도 효과 */
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
 }
@@ -113,34 +134,34 @@ body {
 
 .service-card p {
     font-size: 1rem;
-    color: #6e6e73; /* 새로운: 카드 텍스트 색상 */
+    color: #555;
 }
 
 /* 푸터 */
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #1d1d1f; /* 새로운: 어두운 배경색 */
+    background-color: #333;
     color: white;
 }
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.5rem; /* 수정: 모바일에서 텍스트 크기 조정 */
+        font-size: 2.5rem;
     }
 
     .hero p {
-        font-size: 1rem; /* 수정: 모바일 텍스트 크기 축소 */
+        font-size: 1rem;
     }
 
     .cta-button {
         padding: 12px 25px;
-        font-size: 0.9rem; /* 수정: 버튼 크기 축소 */
+        font-size: 0.9rem;
     }
 
     .navbar nav .nav-list {
-        flex-direction: column; /* 새로운: 모바일 메뉴 정렬 */
+        flex-direction: column;
         gap: 10px;
     }
 }
