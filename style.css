@@ -44,7 +44,7 @@ body {
 /* 메뉴 간격 유지 */
 .navbar nav .nav-list {
     display: flex;
-    justify-content: flex-end; /* 메뉴를 오른쪽 정렬 */
+    
     gap: 60px; /* 기존 메뉴 간격 유지 */
     list-style: none;
     margin: 0;
