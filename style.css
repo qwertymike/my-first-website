@@ -11,8 +11,8 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(to right, #1a73e8, #005bb5); /* 그라데이션 배경 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: white; /* 흰색 배경 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 효과 */
     z-index: 1000;
     padding: 10px 20px;
 }
@@ -28,7 +28,7 @@ body {
 
 .navbar nav .nav-list li a {
     text-decoration: none;
-    color: white;
+    color: #333; /* 검은 글씨 */
     font-weight: 600;
     font-size: 1rem;
     padding: 10px 15px; /* 메뉴 폭 조정 */
@@ -37,9 +37,10 @@ body {
 }
 
 .navbar nav .nav-list li a:hover {
-    background-color: #ffffff;
-    color: #1a73e8;
+    background-color: #f4f4f4; /* 약간 어두운 배경으로 변경 */
+    color: #000; /* 호버 시 더 진한 검정 글씨 */
 }
+
 
 /* Hero 섹션 */
 .hero {
