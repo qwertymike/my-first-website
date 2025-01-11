@@ -1,4 +1,4 @@
-
+/* 전체 기본 스타일 */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -6,6 +6,39 @@ body {
     color: #333;
 }
 
+/* 네비게이션 바 */
+.navbar {
+    position: fixed; /* 추가: 화면 상단에 고정 */
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 추가: 가벼운 그림자 효과 */
+    z-index: 1000; /* 수정: 다른 요소 위에 고정 */
+    padding: 10px 20px;
+}
+
+.navbar nav .nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav .nav-list li a {
+    text-decoration: none;
+    color: #333; /* 기존: 기본 텍스트 색상 */
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* 추가: 부드러운 색상 전환 */
+}
+
+.navbar nav .nav-list li a:hover {
+    color: #0071e3; /* 새로운: Apple 스타일의 파란색 포인트 */
+}
+
+/* Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
@@ -13,38 +46,101 @@ body {
     align-items: center;
     text-align: center;
     height: 100vh;
-    background-image: url('./images/background.jpg');
+    background-image: url('./images/background.jpg'); /* 새로운: 배경 이미지 추가 */
     background-size: cover;
     background-position: center;
-    color: white;
-    padding: 20px;
+    color: #1d1d1f; /* 수정: 텍스트 색상 추가 */
+    padding: 0 20px;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    font-size: 3.5rem; /* 수정: 더 큰 텍스트 크기 */
+    font-weight: 700; /* 추가: 텍스트 굵게 표시 */
+    margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 1.2rem;
-    margin: 20px 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #6e6e73; /* 새로운: Apple 스타일의 텍스트 색상 */
+    max-width: 600px;
+    line-height: 1.5;
+    margin-bottom: 30px;
 }
 
 .cta-button {
-    margin-top: 20px;
     padding: 15px 30px;
     font-size: 1rem;
+    font-weight: bold; /* 추가: 텍스트 굵게 표시 */
     color: white;
-    background-color: #1a73e8;
+    background-color: #0071e3; /* Apple 스타일의 파란색 */
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* 추가: 배경색 전환 효과 */
 }
 
 .cta-button:hover {
-    background-color: #135bb5;
+    background-color: #005bb5; /* 새로운: Hover 효과 */
+}
+
+/* 서비스 섹션 */
+#services {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* 새로운: 서비스 섹션 배경 색상 */
+}
+
+#services h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #1d1d1f; /* 새로운: 헤더 텍스트 색상 */
+}
+
+.service-card {
+    margin: 0 auto 20px auto;
+    max-width: 300px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 새로운: 카드 섀도 효과 */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #6e6e73; /* 새로운: 카드 텍스트 색상 */
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1d1d1f; /* 새로운: 어두운 배경색 */
+    color: white;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem; /* 수정: 모바일에서 텍스트 크기 조정 */
+    }
+
+    .hero p {
+        font-size: 1rem; /* 수정: 모바일 텍스트 크기 축소 */
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 0.9rem; /* 수정: 버튼 크기 축소 */
+    }
+
+    .navbar nav .nav-list {
+        flex-direction: column; /* 새로운: 모바일 메뉴 정렬 */
+        gap: 10px;
+    }
 }
