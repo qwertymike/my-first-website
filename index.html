@@ -51,7 +51,25 @@
             <p>다양한 경험을 가진 최고의 튜터들.</p>
         </div>
     </section>
+    <!-- 상담 입력 섹션 -->
+    <section id="consultFormSection" style="display: none; padding: 50px; background-color: #f9f9f9;">
+        <h2>무료 상담 신청</h2>
+        <form id="consultForm">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
 
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" placeholder="이메일을 입력하세요" required>
+
+            <label for="phone">연락처</label>
+            <input type="tel" id="phone" name="phone" placeholder="연락처를 입력하세요" required>
+
+            <label for="message">상담 내용</label>
+            <textarea id="message" name="message" placeholder="상담 내용을 입력하세요" required></textarea>
+
+            <button type="submit">제출</button>
+        </form>
+    </section>
     <!-- 푸터 -->
     <footer>
         <p>&copy; 2025 주식회사 라이프컴패니언. All rights reserved.</p>
