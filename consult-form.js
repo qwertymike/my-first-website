@@ -26,7 +26,7 @@ document.getElementById('consultForm').addEventListener('submit', function (e) {
         message: document.getElementById('message').value
     };
     // Google Apps Script Web App URL
-    const scriptURL = 'https://script.google.com/macros/s/AKfycby_ZQeS08RepN-Tr3sfif_MEPy3Cnuj3rwXi_NfrToBNa2sjI1z_MUgy-9w2w71mcaJLw/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz3vgNLNFVnEwJe3EQz3Hoh0Y1-EOszQVfmrlCefWKhGoLybPoINilVgnulES8uu7G9IQ/exec';
 
     // 데이터 전송
     fetch(scriptURL, {
