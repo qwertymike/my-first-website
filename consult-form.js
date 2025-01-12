@@ -25,7 +25,26 @@ document.getElementById('consultForm').addEventListener('submit', function (e) {
         phone: document.getElementById('phone').value,
         message: document.getElementById('message').value
     };
+    // Google Apps Script Web App URL
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyZJ2kwGwhBlO4gqX2y8veK_ZT1vBw_nV2Z7Sj0VCIQQIJqmJcL0aNZuUgW5bFnxu-puw/exec';
 
+    // 데이터 전송
+    fetch(scriptURL, {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: { 'Content-Type': 'application/json' }
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                alert('문의가 성공적으로 제출되었습니다!');
+                document.getElementById('consultForm').reset();
+            } else {
+                alert('문의 제출 중 오류가 발생했습니다.');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    
     // 알림 메시지
     alert(`문의가 성공적으로 제출되었습니다!\n이름: ${formData.name}\n이메일: ${formData.email}\n연락처: ${formData.phone}\n내용: ${formData.message}`);
     
